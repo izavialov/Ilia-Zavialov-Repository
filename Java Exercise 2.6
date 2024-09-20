@@ -1,0 +1,29 @@
+// Program Name: Exercise 2.6
+// Author: Ilia Zavialov
+// Date: September 15, 2024
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        // Creates a scanner to read input
+        Scanner input = new Scanner(System.in);
+
+        // Asks to enter subtotal and rate
+        System.out.print("Enter the subtotal and a gratuity rate: ");
+
+        // Reads subtotal and rate
+        double subtotal = input.nextDouble();
+        double gratuityRate = input.nextDouble();
+
+        // Calculates rate and total
+        double gratuity = subtotal * (gratuityRate / 100);
+        double total = subtotal + gratuity;
+
+        // Showing results
+        System.out.printf("The gratuity is $%.2f and total is $%.2f", gratuity, total);
+
+        input.close();
+    }
+}
