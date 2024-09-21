@@ -1,1 +1,47 @@
+// Program name: Exercise 3.6
+// Author: Ilia Zavialov
+// Date: September 21, 2024
 
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Asks user to enter the info
+        System.out.print("Please enter weight (pounds): ");
+        double weight = scanner.nextDouble();
+
+        System.out.print("Please enter feet: ");
+        int feet = scanner.nextInt();
+
+        System.out.print("Please enter inches: ");
+        int inches = scanner.nextInt();
+
+        // Convertions
+        int totalInches = (feet * 12) + inches;
+
+        double heightInMeters = totalInches * 0.0254;
+
+        double weightInKilograms = weight * 0.453592;
+
+        // Calculates BMI
+        double bmi = weightInKilograms / (heightInMeters * heightInMeters);
+
+        System.out.println("BMI is " + bmi);
+
+        // Tells user BMI category
+        if (bmi < 18.5) {
+            System.out.println("Underweight");
+        } else if (bmi >= 18.5 && bmi < 24.9) {
+            System.out.println("Normal");
+        } else if (bmi >= 25 && bmi < 29.9) {
+            System.out.println("Overweight");
+        } else {
+            System.out.println("Obese");
+        }
+
+        scanner.close();
+    }
+}
