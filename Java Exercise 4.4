@@ -1,1 +1,23 @@
+// Program name: Exercise 4.4
+// Author: Ilia Zavialov
+// Date: September 28, 2024
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // scanner object for input
+        Scanner input = new Scanner(System.in);
+        
+        // Asks user to enter side of hexagon
+        System.out.print("Enter the side: ");
+        double side = input.nextDouble();
+        
+        // Calculates area of hexagon
+        double area = (6 * Math.pow(side, 2)) / (4 * Math.tan(Math.PI / 6));
+        
+        // Results
+        System.out.printf("The area of the hexagon is %.2f\n", area);
+    }
+}
 
