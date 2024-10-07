@@ -1,1 +1,16 @@
+// Program name: Exercise 5.4
+// Author: Ilia Zavialov
+// Date: October 7, 2024
 
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Miles\t\tKilometers");
+        
+        // Printing miles from 1 to 10 (loop)
+        for (int miles = 1; miles <= 10; miles++) {
+            // Converts 1 mile = 1.609 km
+            double kilometers = miles * 1.609;
+            System.out.printf("%-10d\t%.3f%n", miles, kilometers);
+        }
+    }
+}
