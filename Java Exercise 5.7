@@ -1,1 +1,26 @@
+// Program name: Exercise 5.7
+// Author: Ilia Zavialov
+// Date: October 8, 2024
 
+public class Main {
+    public static void main(String[] args) {
+        double tuition = 10000;
+        double rate = 0.05;  
+
+        // After 10 years
+        for (int year = 1; year <= 10; year++) {
+            tuition += tuition * rate;
+        }
+
+        System.out.printf("Tuition cost in 10 years: $%.2f%n", tuition);
+
+        // Total cost for 4 years after tenth year
+        double totalCost = 0;
+        for (int year = 1; year <= 4; year++) {
+            totalCost += tuition;
+            tuition += tuition * rate;
+        }
+
+        System.out.printf("Total cost for 4 years after tenth year: $%.2f%n", totalCost);
+    }
+}
