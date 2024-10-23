@@ -1,1 +1,32 @@
+// Program name: Exercise 6.2
+// Author: Ilia Zavialov
+// Date: October 23, 2024
 
+public class Main {
+
+    // Sum digits as long integer
+    public static int sumDigits(long n) {
+        int sum = 0;
+
+        // Loops and adds digits        
+        while (n != 0) {
+            sum += n % 10;
+            n /= 10;
+        }
+
+        return sum;
+    }
+
+    // Test
+    public static void main(String[] args) {
+        long number = 234;
+        System.out.println("Sum of digits in " + number + " is: " + sumDigits(number));
+
+        number = 17962;
+        System.out.println("Sum of digits in " + number + " is: " + sumDigits(number));
+
+        // Testing larger number
+        number = 195372078366699L;
+        System.out.println("Sum of digits in " + number + " is: " + sumDigits(number));
+    }
+}
