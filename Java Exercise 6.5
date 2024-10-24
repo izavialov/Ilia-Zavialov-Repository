@@ -1,1 +1,51 @@
+// Program name: Exercise 6.5
+// Author: Ilia Zavialov
+// Date: October 24, 2024
+
+import java.util.Scanner;
+
+public class Main {
+
+    // Method for displaying 3 numbers in ascending sequence
+    public static void displaySortedNumbers(double num1, double num2, double num3) {
+        double temp;
+
+        // Sorting num1 & num2
+        if (num1 > num2) {
+            temp = num1;
+            num1 = num2;
+            num2 = temp;
+        }
+
+        // Sorting num1 & num3
+        if (num1 > num3) {
+            temp = num1;
+            num1 = num3;
+            num3 = temp;
+        }
+
+        // Sorting num2 & num3
+        if (num2 > num3) {
+            temp = num2;
+            num2 = num3;
+            num3 = temp;
+        }
+
+        System.out.println("Numbers in ascending order are: " + num1 + ", " + num2 + ", " + num3);
+    }
+
+    // Testing displaySortedNumbers method
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Asks user to enter 3 numbers
+        System.out.print("Please enter three numbers: ");
+        double num1 = input.nextDouble();
+        double num2 = input.nextDouble();
+        double num3 = input.nextDouble();
+
+        // Displays number in ascending order
+        displaySortedNumbers(num1, num2, num3);
+    }
+}
 
