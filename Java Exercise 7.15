@@ -1,1 +1,70 @@
+// Program name: Exercise 7.15
+// Author: Ilia Zavialov
+// Date: October 31, 2024
 
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Main {
+
+    // Method to eliminate duplicates from an integer array
+    public static int[] eliminateDuplicates(int[] list) {
+        // Create ArrayList to store distinct numbers
+        ArrayList<Integer> distinctList = new ArrayList<>();
+
+        // Loop through each number in input array
+        for (int num : list) {
+            // If number is not in the distinctList, add it
+            if (!distinctList.contains(num)) {
+                distinctList.add(num);
+            }
+        }
+
+        // Convert ArrayList of distinct numbers back to array
+        int[] result = new int[distinctList.size()];
+        for (int i = 0; i < distinctList.size(); i++) {
+            result[i] = distinctList.get(i);
+        }
+
+        // Return array with distinct numbers
+        return result;
+    }
+
+    public static void main(String[] args) {
+        // Create Scanner to read user input
+        Scanner input = new Scanner(System.in);
+        // Initialize an array to store 10 numbers
+        int[] numbers = new int[10];
+
+        // Ask user to enter ten numbers
+        System.out.print("Please enter ten numbers: ");
+        for (int i = 0; i < 10; i++) {
+            // Store each number in array
+            numbers[i] = input.nextInt();
+        }
+
+        // Call the eliminateDuplicates method and store the result
+        int[] distinctNumbers = eliminateDuplicates(numbers);
+
+        // Display distinct numbers
+        System.out.print("The distinct numbers are: ");
+        for (int num : distinctNumbers) {
+            System.out.print(num + " ");
+        }
+
+// Pseudocode:
+// 1. eliminateDuplicates method:
+
+//   1.1 Create an empty list (distinctList) to store unique numbers.
+//   1.2 Loop through each element in the input array (if element is not in distinctList, add it).
+//   1.3 Convert distinctList back to array and return it.
+
+// 2. Main method:
+
+//    2.1 Create Scanner to read input.
+//    2.2 Ask user to enter ten numbers and store them in an array
+//    2.3 Call eliminateDuplicates on the numbers array.
+//    2.4 Print each element in the returned array of distinct numbers.
+
+    }
+}
