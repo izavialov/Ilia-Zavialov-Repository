@@ -1,1 +1,62 @@
+// Program name: Exercise 7.8
+// Author: Ilia Zavialov
+// Date: October 31, 2024
 
+import java.util.Scanner;
+
+public class Main {
+
+    // Method calculating average of array of integers
+    public static int average(int[] array) {
+        int sum = 0;
+        for (int value : array) {
+            sum += value;
+        }
+        return sum / array.length; // returning average as an integer
+    }
+
+    // Method calculating average of array of doubles
+    public static double average(double[] array) {
+        double sum = 0;
+        for (double value : array) {
+            sum += value;
+        }
+        return sum / array.length; // returning average as a double
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double[] doubleArray = new double[10];
+
+        // Ask the user to enter ten double values
+        System.out.println("Please enter ten double values:");
+        for (int i = 0; i < doubleArray.length; i++) {
+            doubleArray[i] = input.nextDouble();
+        }
+
+        // Call the average method for double arrays and display the result
+        double averageValue = average(doubleArray);
+        System.out.println("Average of the entered values is: " + averageValue);
+
+
+    // Pseudocode:
+    //  1. Define average method with an integer array parameter:
+
+    //    1.2 Initialize an integer sum to 0.
+    //    1.3 Loop through each element in the integer array and add it to sum.
+    //    1.4 Return the integer division of sum by the array length as the average.
+
+    //  2. Define the average method with a double array parameter:
+
+    //    2.1 Initialize a double sum to 0.
+    //    2.2 Loop through each element in the double array and add it to sum.
+    //    2.3 Return sum divided by the array length as the average.
+
+    //  3. Main method:
+
+    //    3.1 Create a Scanner object for user input.
+    //    3.2 Declare an array of 10 doubles.
+    //    3.3 Ask the user to enter 10 double values and store each in the array.
+    //    3.4 Call average method for the double array and display the result.
+    }
+}
