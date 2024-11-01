@@ -1,1 +1,100 @@
+// Program name: Exercise 9.8
+// Author: Ilia Zavialov
+// Date: November 1, 2024
 
+public class Main {
+    // Constants for fan speed
+    public static final int SLOW = 1;
+    public static final int MEDIUM = 2;
+    public static final int FAST = 3;
+
+    // Private data fields with default values
+    private int speed = SLOW;
+    private boolean on = false;
+    private double radius = 5.0;
+    private String color = "blue";
+
+    // Constructor that creates a default fan
+    public Main() {
+    }
+
+    // Accessor and mutator methods
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public boolean isOn() {
+        return on;
+    }
+
+    public void setOn(boolean on) {
+        this.on = on;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    // toString method to return fans state as a string
+    public String toString() {
+        if (on) {
+            return "Fan speed: " + speed + ", color: " + color + ", radius: " + radius;
+        } else {
+            return "Fan color: " + color + ", radius: " + radius + ", fan is off";
+        }
+    }
+
+    // Test program
+    public static void main(String[] args) {
+        // Create two Fan objects
+        Main fan1 = new Main();
+        Main fan2 = new Main();
+
+        // Assign properties (max speed, radius of 10, yellow color) and turn it on for fan1
+        fan1.setSpeed(FAST);
+        fan1.setRadius(10);
+        fan1.setColor("yellow");
+        fan1.setOn(true);
+
+        // Assign properties (medium speed, radius of 5, blue color) and turn it off for fan2
+        fan2.setSpeed(MEDIUM);
+        fan2.setRadius(5);
+        fan2.setColor("blue");
+        fan2.setOn(false);
+
+        // Display fan objects
+        System.out.println(fan1.toString());
+        System.out.println(fan2.toString());
+
+// Pseudocode:
+// 1. Define constants for fan speeds
+// 2. Define private fields with default values
+// 3. Define a no-argument constructor to initialize a fan with default values
+// 4. Define accessor methods for each field
+// 5. Define mutator methods for each field
+// 6. Define the toString method
+
+// Test program pseudocode:
+// 1. Create 2 fan objects
+// 2. Set properties for fan1
+// 3. Set properties for fan2
+// 4. Display fan objects
+
+    }
+}
